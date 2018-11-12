@@ -49,7 +49,7 @@ class ExtractingData extends React.Component {
     console.log ('Component did mount log');
   }
 
-  getCoinName = () =>{
+getCoinName = () =>{
     let y = this.state.coins.filter(coin => {
     return coin.name.includes(this.state.inputUser)
  }) 
@@ -65,7 +65,6 @@ class ExtractingData extends React.Component {
     const filteredCoins = this.state.filteredCoins;
     console.log (coins);
     // console.log (coins.length);
-
     console.log ('Loging from render method');
     return (
       <div className="Main">
