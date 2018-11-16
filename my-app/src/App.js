@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <h1>REACT API</h1>
+          <h1>Cryptocurrency Coins Visualizing Application</h1>
           <ExtractingData />
       </div>
     );
