@@ -1,39 +1,7 @@
 import React from 'react';
+import Coins from '../components/Coins'
 
-const Coins = props => {
-    if (props.filteredCoins){
-        const newFilteredCoins = props.filteredCoins.map(coin=>{
-            return(
-                <div key={coin.id}>
-                    <span>{coin.name}</span>
-                    <span>{coin.price_usd}</span>
-                    <span>{coin.rank}</span>
-                    <span>{coin.symbol}</span>
-                </div>
-            );
-        })
-        return newFilteredCoins;
-    }
-     else if(props.coins ) {
-       const coinsElements = props.coins.map (coin => {
-            return (
-                <div key={coin.id} >
-                    <span>{coin.name}</span>
-                    <span>{coin.price_usd}</span>
-                    <span>{coin.rank}</span>
-                    <span>{coin.symbol}</span>
-                </div>
-            );
-          })
-        return coinsElements;
-    }
-     else{
-        return <div> <h1>Loading.....</h1></div>;
-        }  
-    
-  };
-
-class ExtractingData extends React.Component {
+class ExtractData extends React.Component {
   state = {
     coins: null,
     inputUser:'',
@@ -108,7 +76,9 @@ render () {
         <input type="text"  placeholder="Search Countries" onChange={this.userInput}/>
         <button onClick={this.getCoinName}>Search By Letter</button>
         <button onClick = {()=>this.sortedByAtoZ("name")}>Sort By Name </button>
-        
+        <div className="Title">
+        <span>Name</span><span>Price USD</span><span>% Change in 24H</span><span>Rank</span><span>Symbol</span>
+        </div>
         <div className="coins">
             <Coins  coins={coins} 
                     filteredCoins ={filteredCoins} 
@@ -120,4 +90,4 @@ render () {
   }
 }
 
-export default ExtractingData;
+export default ExtractData;

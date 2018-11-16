@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ExtractingData from './components/ExtractingData'
+import ExtractData from './components/ExtractData'
 
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
           <h1>Cryptocurrency Coins Visualizing Application</h1>
-          <ExtractingData />
+          <ExtractData />
       </div>
     );
   }
