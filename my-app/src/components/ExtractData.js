@@ -17,7 +17,6 @@ class ExtractData extends React.Component {
         coins: coins,
       });
     });
-    console.log ('Component did mount log');
   }
 
   getCoinName = () =>{
@@ -54,8 +53,6 @@ sortedByAtoZ = (type) =>{
     console.log("sorted",this.state.sortedCoins);
 }
 
-
-
 userInput = (e)=>{
     this.setState({inputUser:e.target.value})
 }
@@ -77,7 +74,11 @@ render () {
         <button onClick={this.getCoinName}>Search By Letter</button>
         <button onClick = {()=>this.sortedByAtoZ("name")}>Sort By Name </button>
         <div className="Title">
-        <span>Name</span><span>Price USD</span><span>% Change in 24H</span><span>Rank</span><span>Symbol</span>
+          <span>Name</span>
+          <span>Price USD</span>
+          <span>% Change in 24H</span>
+          <span>Rank</span>
+          <span>Symbol</span>
         </div>
         <div className="coins">
             <Coins  coins={coins} 
