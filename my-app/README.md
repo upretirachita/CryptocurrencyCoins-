@@ -1,6 +1,6 @@
 
-# Coin API
-## Main Function sort by Rank and price
-## Sort by Name and sort by letter
+# Post App React Router 
+## User can add and delete post
+### Some state handling 
 
 ![](demo.gif)
